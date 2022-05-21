@@ -22,6 +22,7 @@
 
         chatSocket.onmessage = function(e) {
             const data = JSON.parse(e.data);
+            {#这里把数据推送到聊天框#}
             document.querySelector('#chat-log').value += (data.message + '\n');
         };
 
